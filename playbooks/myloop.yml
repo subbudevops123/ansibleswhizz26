@@ -1,0 +1,13 @@
+---
+- hosts: appserver
+  become: yes
+  tasks:
+  - name: install git, wget and tree on nodes using loops
+    git:
+      name: "{{ item }}"
+      state: present
+    with_iteam: 
+     - git
+     - wget
+     - tree
+       

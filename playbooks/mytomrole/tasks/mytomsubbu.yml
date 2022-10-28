@@ -1,0 +1,8 @@
+--- 
+- 
+  become: true
+  host: appserver
+  roles: 
+    - 
+      role: mytomrole
+      when: "ansible_os_family ==\"RedHat\"

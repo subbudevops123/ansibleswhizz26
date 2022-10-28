@@ -1,8 +1,5 @@
---- 
-- 
-  become: true
-  host: appserver
-  roles: 
-    - 
-      role: mytomrole
-      when: "ansible_os_family ==\"RedHat\"
+---
+- host: appserver
+  Become: yes
+  roles:
+    - {role: mytomrole, when: ansible_os_family =="RedHat"}
